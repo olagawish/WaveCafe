@@ -1,9 +1,6 @@
-@extends('layouts.innerPages')
+@extends('layouts.main')
 
-@section('specialItems')
-<!-- Special Items Page -->
-
-@include('includes.specialItems')
-
-<!-- end Special Items Page -->
+@section('content')
+    @include('includes.specialItems')
 @endsection
+

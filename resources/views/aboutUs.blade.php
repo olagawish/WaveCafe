@@ -1,10 +1,5 @@
-@extends('layouts.innerPages')
+@extends('layouts.main')
 
-@section('aboutUs')
-
-<!-- About Us Page -->
-
-@include('includes.aboutUs')
-
-<!-- end About Us Page -->
+@section('content')
+    @include('includes.about')
 @endsection

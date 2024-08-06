@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-@include('includes.head')
-
+   @include('includes.head')
 </head>
 <body>
-<div class="tm-container">
+  <div class="tm-container">
     <div class="tm-row">
       <!-- Site Header -->
-
-      @include('includes.siteHeader')
-
+      @include('includes.header')
       <div class="tm-right">
         <main class="tm-main">
           <div id="drink" class="tm-page-content">
+            @yield('content')
+
             <!-- Drink Menu Page -->
-
-            @include('includes.drinkMenu')
-
             <!-- end Drink Menu Page -->
           </div>
-          @yield('content')
+
+          <!-- end Contact Page -->
         </main>
       </div>    
     </div>
-
     @include('includes.footer')
-    
-  <!-- Background video -->
-  @include('includes.backgroundV')
+</div>
 
-  @include('includes.footerJs')
-
+<!-- Background video -->
+@include('includes.backgroundVideo')
+  
 </body>
 </html>

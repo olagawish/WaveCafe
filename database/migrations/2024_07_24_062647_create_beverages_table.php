@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('beverages', function (Blueprint $table) {
             $table->id();
-            $table->string('beverageDate');
             $table->string('title');
-            $table->boolean('published');
-            $table->softDeletes();
+            $table->text('content');
+            $table->decimal('price', 10, 2);
+            $table->boolean('published')->default(false);
+            $table->boolean('special')->default(false);
+            $table->string('image');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
