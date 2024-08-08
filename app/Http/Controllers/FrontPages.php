@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Beverage;
 
-class WaveCafe extends Controller
+class FrontPages extends Controller
 {
     public function menu()
     {

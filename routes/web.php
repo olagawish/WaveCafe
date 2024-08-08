@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckActive;
-use App\Http\Controllers\WaveCafe;
+use App\Http\Controllers\FrontPages;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MessageController;
@@ -54,12 +54,12 @@ Route::get('/contactUs', [ContactController::class, 'show'])->name('contactUs.sh
 Route::post('/contactUs', [ContactController::class, 'store'])->name('contactUs.store');
 
 
-// Route::get('/', [WaveCafe::class, 'index'])->name('index');
+// Route::get('/', [FrontPages::class, 'index'])->name('index');
 
-Route::get('/aboutUs', [WaveCafe::class, 'aboutUs'])->name('aboutUs');
-Route::get('/contactUs', [WaveCafe::class, 'contactUs'])->name('contactUs');
-Route::get('/specialItems', [WaveCafe::class, 'specialItems'])->name('specialItems');
-Route::get('/menu', [WaveCafe::class, 'menu'])->name('menu');
+Route::get('/aboutUs', [FrontPages::class, 'aboutUs'])->name('aboutUs');
+Route::get('/contactUs', [FrontPages::class, 'contactUs'])->name('contactUs');
+Route::get('/specialItems', [FrontPages::class, 'specialItems'])->name('specialItems');
+Route::get('/menu', [FrontPages::class, 'menu'])->name('menu');
 
 Route::get('/', function () {
     return view('welcome');

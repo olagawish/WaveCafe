@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 //use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Massage;
+use App\Models\Contact;
 use Carbon\Carbon;
 
-class MassageController extends Controller
+class MessageController extends Controller
 {
     public function index()
     {

@@ -2,7 +2,7 @@
   <ul>
     @foreach($categories as $category)
     <li>
-      <a href="#category-{{ $category->id }}" class="tm-tab-link">{{ $category->name }}</a>
+      <a href="#category-{{ $category->id }}" class="tm-tab-link">{{ $category->categoryName }}</a>
     </li>
     @endforeach
   </ul>

@@ -24,11 +24,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $messages = $this->errMsg();
-        $validated =  $request->validate([
-            'name' => 'required|string|max:255',
+        $validated = $request->validate([
+            'categoryName' => 'required|string|max:255',
         ], $messages);
 
-        Category::create($data);
+        Category::create($validated);
         return redirect()->route('dashboard.categories')->with('success', 'Category created successfully.');
     }
 
@@ -44,8 +44,8 @@ class CategoryController extends Controller
         $messages = $this->errMsg();
         $categories = Category::findOrFail($id);
     
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
+        $validated = $request->validate([
+            'categoryName' => 'required|string|max:255',
         ], $messages);
     
         $categories->update($data);
